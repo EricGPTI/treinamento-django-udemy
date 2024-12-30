@@ -1,0 +1,22 @@
+version: '3'
+
+services:
+  db:
+    image: mysql
+    container_name: db
+    volumes:
+      - ./data:/var/lib/mysql
+    environment:
+      - MYSQL_DATABASE=projeto2
+      - MYSQL_USER=django2
+      - MYSQL_PASSWORD=django2
+      - MYSQL_ROOT_PASSWORD=django2
+    ports:
+      - "3306:3306"
+    restart: always
+    networks:
+      - django2
+
+networks:
+  django2:
+    driver: bridge
