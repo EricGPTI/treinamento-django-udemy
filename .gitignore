@@ -164,9 +164,10 @@ cython_debug/
 # IDE
 .idea
 *.pyc
+__pycache__/
 
 # Data
 *data
 
-# HTML
+# HTML Coverage
 htmlcov/*
